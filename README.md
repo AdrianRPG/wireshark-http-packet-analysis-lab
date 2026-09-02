@@ -49,6 +49,8 @@ These views were used to investigate the different protocol layers and fields co
 
 ### 2. Identify the Protocols Present
 
+![Wireshark protocol analysis](screenshots/protocol-analysis.png)
+
 The **Protocol** column in Wireshark's packet-listing interface was examined to determine which protocols were represented in the trace. The following protocols were identified:
 
 | Protocol    | Layer / Role                | Observation                                            |
@@ -62,6 +64,8 @@ This provided an initial overview of the different protocol layers involved in t
 ---
 
 ### 3. Measure HTTP Response Time
+
+![HTTP response-time analysis](screenshots/http-response-time.png)
 
 The HTTP transaction was analyzed by locating the client's **HTTP GET request** and the corresponding **HTTP OK response** from the server.
 
@@ -100,6 +104,8 @@ This address belongs to the private IPv4 address space and represents the client
 
 ### 6. Identify the Web Browser
 
+![HTTP User-Agent](screenshots/http-user-agent.png)
+
 The HTTP GET request was inspected in Wireshark's **Packet Details** pane. For that reason, the HTTP request headers were expanded to examine the **User-Agent** field, which provides information about the software that generated the request. The browser identified from the User-Agent information was:
 
 **Mozilla Firefox**
@@ -109,6 +115,8 @@ This demonstrates how application-level metadata contained within network packet
 ---
 
 ### 7. Identify the TCP Destination Port
+
+![TCP destination port](screenshots/tcp-destination-port.png)
 
 The TCP segment carrying the HTTP communication was examined by expanding the **Transmission Control Protocol** section in Wireshark's Packet Details pane. The destination port was identified as:
 
